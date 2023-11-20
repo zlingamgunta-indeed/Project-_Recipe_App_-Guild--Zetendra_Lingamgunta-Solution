@@ -10,13 +10,17 @@ function RecipeCreate({ updateRecipes }) {
     preparation: ""
   };
 
-  let [ formData, setFormData ] = useState(initialData)
+  let [ formData, setFormData ] = useState({...initialData})
 
   let onChange = ({target}) => {
-    setFormData((oldData) => ({
-      ...oldData,
+    // setFormData((oldData) => ({
+    //   ...oldData,
+    //   [target.name]: target.value
+    // }))
+    setFormData({
+      ...formData,
       [target.name]: target.value
-    }))
+    })
   }
 
   let onSubmit = (event) => {
