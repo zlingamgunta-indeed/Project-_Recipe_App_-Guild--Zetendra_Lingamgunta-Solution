@@ -15,7 +15,7 @@ function RecipeCreate({ updateRecipes }) {
   let onChange = ({target}) => {
     setFormData((oldData) => ({
       ...oldData,
-      [target.name.toLowerCase()]: target.value
+      [target.name]: target.value
     }))
   }
 
